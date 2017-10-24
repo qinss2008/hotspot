@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
         TextView textView = (TextView) findViewById(R.id.text1);
+        
         SharedPreferences sharedPrefs = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         switch (requestCode) {
