@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.text1);
         String name = sharedPref.getString("saved_name", "hotspot name");
         textView.setText(name);
+        
 
         LinearLayout layout_set = (LinearLayout)findViewById(R.id.layout_set);
         layout_set.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
         TextView textView = (TextView) findViewById(R.id.text1);
-        
+
         SharedPreferences sharedPrefs = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         switch (requestCode) {
